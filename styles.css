@@ -1,0 +1,222 @@
+ @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+    background-image: url('bc.jpg'); /* Your Image Url Here*/
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    color: #4a4a4a;
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(222, 178, 102, 0.7); /* Translucent golden overlay */
+    z-index: 1;
+}
+
+.login-container {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 900px;
+    padding: 20px;
+}
+
+.login-form {
+    background-color: rgba(255, 255, 255, 0.85);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    width: 100%;
+}
+
+.form-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.logo {
+    font-weight: 600;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+}
+
+.close-btn {
+    font-size: 1.5rem;
+    font-weight: 300;
+    cursor: pointer;
+}
+
+.form-content {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+}
+
+.form-left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    color: #000;
+    padding-left: 20px;
+    border-left: 1px solid #ddd;
+}
+
+.form-left h2 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 0;
+}
+
+.form-left p {
+    font-size: 1.2rem;
+    font-weight: 300;
+    margin-top: 0;
+}
+
+.form-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+}
+
+.existing-member h4 {
+    font-weight: 400;
+    font-size: 0.8rem;
+    margin: 0;
+}
+
+.existing-member h1 {
+    font-weight: 700;
+    font-size: 2rem;
+    margin-top: 5px;
+    margin-bottom: 30px;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    font-weight: 500;
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    background-color: transparent;
+    font-size: 1rem;
+    outline: none;
+}
+
+.input-group input:focus {
+    border-bottom-color: #000;
+}
+
+.continue-btn-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    background-color: #000;
+    border-radius: 50px;
+    padding: 10px 20px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.continue-btn-container:hover .arrow-icon {
+    transform: translateX(5px);
+}
+
+.continue-btn {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    text-align: left;
+    flex-grow: 1;
+}
+
+.arrow-icon {
+    transition: transform 0.3s ease;
+}
+
+.social-login {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.social-login p {
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+}
+
+.social-icons a {
+    color: #000;
+    font-size: 1.5rem;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #7b5832;
+}
+
+.signup-link {
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.signup-link a {
+    color: #000;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+/* For smaller screens */
+@media (max-width: 768px) {
+    .form-content {
+        flex-direction: column;
+    }
+    .form-left {
+        display: none; /* Hiding the left part on smaller screens */
+    }
+    .form-right {
+        padding-left: 0;
+    }
+    .login-form {
+        padding: 20px;
+    }
+}
